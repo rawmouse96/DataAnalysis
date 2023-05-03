@@ -1,0 +1,9 @@
+{% extends "ex.html" %}
+
+{% block content %}
+    <h3>산점도 결과</h3>
+    <hr>
+    <img src="{{url_for('static', filename='img/scatter.png')}}">
+    <br><br>
+    <button onclick="location.href='/scatter'">재실행</button>
+{% endblock %}

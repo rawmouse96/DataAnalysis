@@ -8,7 +8,7 @@ def index():
 
 @app.route('/hello')
 def hello():
-    return render_template('01.hello.html')
+    return render_template('01.hello.html') 
 
 # e.g. localhost:5000/area?pi=3.14&radius=5
 @app.route('/area')                         # default : GET방식
