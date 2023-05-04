@@ -5,16 +5,39 @@
     th { text-align: center; width: 14.28%;}
     td { height: 100px; }
 </style>
+<script>
+    const now = new Date();
+    const weekday = now.getDay();
+    function twoDigit(num) {
+       return (num<10) ? '0' + num : String(num);
+    }
+    function myDatetime(date){
+       return `${date.getFullYear()}-${twoDigit(date.getMonth()+1)}-${twoDigit(date.getDate())} `
+       + `${twoDigit(date.getHours())}:${twoDigit(date.getMinutes())}:${twoDigit(date.getSeconds())}`;
+    }
+    window.onload = function() {
+       setInterval(function() {
+           const now = new Date();
+           const week = ['일', '월', '화', '수', '목', '금', '토']
+           let k = now.getDay();									
+
+           const dateStr = myDatetime(now).substring(2, 10) + '(' + week[k] + ') ' ;
+           const timeStr = myDatetime(now).substring(11, 19);
+           
+           document.getElementById('time').innerHTML = dateStr + timeStr;
+        }, 1000)
+    }
+</script>
 {% endblock %}
 {% block main %}
 <h3><strong>일정표</strong></h3>
 <hr>
 <div class="d-flex justify-content-between" style="font-weight: bold;">
-    <div>2023-03-15(수)</div>
+    <div id="time"></div>
     <div>
         <a href="#"><i class="fa-solid fa-angles-left"></i></a>
         <a href="#"><i class="fa-solid fa-angle-left ms-2"></i></a>
-        <span class="badge bg-primary mx-2">2023.03</span>
+        <span class="badge bg-primary mx-2">2023.05</span>
         <a href="#"><i class="fa-solid fa-angle-right me-2"></i></a>
         <a href="#"><i class="fa-solid fa-angles-right"></i></a>
     </div>
@@ -30,65 +53,61 @@
         <th class="text-primary">토</th>
     </tr>
     <tr>
-        <td class="text-danger" style="opacity: 0.5;">26</td>
-        <td style="opacity: 0.5;">27</td>
-        <td style="opacity: 0.5;">28</td>
+        <td class="text-danger" style="opacity: 0.5;">30</td>
+        <td style="opacity: 0.5;">1</td>
+        <td style="opacity: 0.5;">2</td>
         <td>
             <div class="d-flex justify-content-between">
-                <div class="text-danger">1</div>
-                <div>삼일절</div>
+                <div class="text-danger">3</div>
             </div>
         </td>
-        <td>2</td>
-        <td>3</td>
-        <td class="text-primary">4</td>
+        <td>4</td>
+        <td>5</td>
+        <td class="text-primary">6</td>
     </tr>
     <tr>
-        <td class="text-danger">5</td>
-        <td>6</td>
-        <td>7</td>
+        <td class="text-danger">7</td>
         <td>8</td>
         <td>9</td>
         <td>10</td>
-        <td class="text-primary">11</td>
+        <td>11</td>
+        <td>12</td>
+        <td class="text-primary">13</td>
     </tr>
     <tr>
-        <td class="text-danger">12</td>
-        <td>13
-            <div class="mt-1" style="font-size: 12px;">09:00 오리엔테이션</div>
-        </td>
+        <td class="text-danger">14</td>
+        <td>15</td>
         <td>
             <div class="d-flex justify-content-between">
-                <div>14</div>
-                <div>화이트데이</div>
+                <div>16</div>
             </div>
             <div class="mt-1" style="font-size: 12px;">
                 <strong>12:00 케냐방문</strong><br>
                 18:00 귀가
             </div>
         </td>
-        <td>15</td>
-        <td>16</td>
         <td>17</td>
-        <td class="text-primary">18</td>
+        <td>18</td>
+        <td>19</td>
+        <td class="text-primary">20</td>
     </tr>
     <tr>
-        <td class="text-danger">19</td>
-        <td>20</td>
-        <td>21</td>
+        <td class="text-danger">21</td>
         <td>22</td>
         <td>23</td>
         <td>24</td>
-        <td class="text-primary">25</td>
+        <td>25</td>
+        <td>26</td>
+        <td class="text-primary">27</td>
     </tr>
     <tr>
-        <td class="text-danger">26</td>
-        <td>27</td>
-        <td>28</td>
+        <td class="text-danger">28</td>
         <td>29</td>
         <td>30</td>
         <td>31</td>
-        <td class="text-primary" style="opacity: 0.5;">1</td>
+        <td>1</td>
+        <td>2</td>
+        <td class="text-primary" style="opacity: 0.5;">3</td>
     </tr>
 </table>
 {% endblock %}

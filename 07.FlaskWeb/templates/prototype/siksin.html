@@ -10,9 +10,11 @@
 <h2>장안문 맛집리스트</h2>
 <hr>
 <table class='table table-bordered border-dark'>
-    <tr><th>점포명</th><th>평점</th><th>위치</th><th>대표메뉴</th></tr>
+    <tr><th style="width: 6%;">대표사진</th><th style="width: 10%;">점포명</th><th style="width: 8%;">평점</th>
+        <th style="width: 28%;">위치</th><th style="width: 38%;">대표메뉴</th></tr>
     {% for food in food_list %}
         <tr>
+            <td><img src="{{food.img}}" style="height:60px"></td>
             <td><label class="col-form-label">{{food.title}}</label></td>
             <td><label class="col-form-label">{{food.score}}</label></td> 
             <td><label class="col-form-label">{{food.loc}}</label></td>
