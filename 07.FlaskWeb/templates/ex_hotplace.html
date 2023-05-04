@@ -1,11 +1,17 @@
 {% extends "ex.html" %}
 {% block content %}
-    <h3>수원 Hot Place</h3>
-    <hr>
-    <form action="" method="post">
-        <input type="text" name="place1">
-        <input type="text" name="place2">
-        <input type="text" name="place3">
-        <input type="submit" name="제출">
-    </form>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4"><br>
+        <h2>수원 Hot Place</h2>
+        <hr><br><br>
+        <form action="" method="post" style="font-size: 20px;">
+            <input type="text" name="place1">
+            <input type="text" name="place2">
+            <input type="text" name="place3">
+            <input type="submit" name="제출">
+        </form>
+    </div>
+    <div class="col-4"></div>
+</div>
 {% endblock %}
