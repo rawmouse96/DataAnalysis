@@ -1,0 +1,23 @@
+{% extends 'prototype/base.html' %}
+{% block title %}식신선정 장안문 맛집리스트{% endblock %}
+{% block additional_head %}
+<style>
+    td {font-weight: bold;}
+</style>
+{% endblock %}
+
+{% block main %}
+<h2>장안문 맛집리스트</h2>
+<hr>
+<table class='table table-bordered border-dark'>
+    <tr><th>점포명</th><th>평점</th><th>위치</th><th>대표메뉴</th></tr>
+    {% for food in food_list %}
+        <tr>
+            <td><label class="col-form-label">{{food.title}}</label></td>
+            <td><label class="col-form-label">{{food.score}}</label></td> 
+            <td><label class="col-form-label">{{food.loc}}</label></td>
+            <td><label class="col-form-label">{{food.menu}}</label></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

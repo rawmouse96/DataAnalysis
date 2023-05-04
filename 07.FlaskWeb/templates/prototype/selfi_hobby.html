@@ -1,0 +1,58 @@
+{% extends 'prototype/base.html' %}
+{% block title %}취미소개{% endblock %}
+{% block additional_head %}
+<style>
+    button {border-radius: 10%;}
+</style>
+{% endblock %}
+
+{% block main %}
+<div class="container text-black py-3" style="padding:px 40px; text-align: center;">
+    <h2 class="mt-5"><img src="{{url_for('static', filename='img/hobby.png')}}" alt="hobby" style="height: 30px;"> 취미</h2><hr>
+    <div class="row mt-5">
+        <div class="col">
+            <!-- Carousel -->
+        <div id="demo" class="carousel slide " data-bs-ride="carousel" >
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner" >	
+                <div class="carousel-item active">
+                    <img src="{{url_for('static', filename='img/music.jpg')}}" alt="music" class="d-block">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='img/reading.jpg')}}" alt="reading" class="d-block">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='img/catch.jpg')}}" alt="catchmind" class="d-block">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='img/sudoku.jpg')}}" alt="sudoku" class="d-block">
+                </div>
+            </div>
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        </div>
+        <div class="col" style="font-size: 17px;">
+            <br><br>
+            <br><p>주로하는 취미활동은 음악과 영화 감상 그리고 독서,<br><br> 캐치마인드, 스도쿠풀기입니다.</p>
+            <br><p>특히 뉴에이지 음악을 들으며 독서하는 것을 좋아하고</p>
+            <br><p>나중에 피아노와 스케이트보드를 배워보고 싶습니다.</p>
+            
+            <a href="/selfi"><button>돌아가기</button></a>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

@@ -2,14 +2,14 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-4"></div>
-    <div class="col-4">
-        <h3>산점도 결과</h3>
+    <div class="col-3"></div>
+    <div class="col-6">
+        <h3>Scatter plot</h3>
         <hr>
         <img src="{{url_for('static', filename='img/scatter.png')}}">
         <br><br>
-        <button onclick="location.href='/scatter'">재실행</button>
+        <button class="form-control" onclick="location.href='/scatter'">재실행</button>
     </div>
-    <div class="col-4"></div>
+    <div class="col-3"></div>
 </div>
 {% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'prototype/base.html' %}
+{% block title %}좋아하는 음식{% endblock %}
+
+{% block main %}
+<div class="container-fluid text-black p-4 mt-4" style="padding:100px 20px; text-align: center;">
+    <span style="font-size: 30px;"><img src="{{url_for('static', filename='img/food.png')}}" alt="food" style="height: 30px;">좋아하는 음식</span>
+    <a href="/selfi"><button class="form-control" style="font-size: 17px;">돌아가기</button></a><hr><br>
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">장어구이</div>
+                <div class="card-body"><img src="{{url_for('static', filename='img/jangeo.jpg')}}" style="height: 200px; width: 200px;"></div> 
+                <div class="card-footer"> - </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">장흥한우삼합</div> 
+                <div class="card-body"><img src="{{url_for('static', filename='img/jh.jpg')}}" style="height: 200px; width: 200px;"></div> 
+                <div class="card-footer">키조개,표고,한우를 함께 구워먹는 삼합</div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">민어회</div>
+                <div class="card-body"><img src="{{url_for('static', filename='img/mineo.jpg')}}" style="height: 200px; width: 200px;"></div> 
+                <div class="card-footer"> - </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">데자와</div>
+                <div class="card-body"><img src="{{url_for('static', filename='img/dejawa.jpg')}}" style="height: 200px; width: 200px;"></div> 
+                <div class="card-footer"> - </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

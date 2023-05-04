@@ -1,0 +1,37 @@
+{% extends 'prototype/base.html' %}
+{% block title %}기억에 남는 여행지{% endblock %}
+{% block additional_head %}
+<style>
+    button {border-radius: 10%;}
+</style>
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid text-black" style="padding:50px 20px; text-align: center;">
+    <span style="font-size: 30px;"><img src="{{url_for('static', filename='img/travel.png')}}" alt="idea" style="height: 30px;">기억에 남는 여행지 </span>
+        <a href="/selfi"><button style="font-size: 17px;">돌아가기</button></a><hr><br>
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">제주도</div>
+                <div class="card-body"><img src="{{url_for('static', filename='img/jeju.jpg')}}" style="height: 300px; width: 300px;"></div> 
+                <div class="card-footer">오설록 티뮤지엄</div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">부산 여행</div>
+                <div class="card-body"><img src="{{url_for('static', filename='img/hwd.jpg')}}" style="height: 300px; width: 300px;"></div> 
+                <div class="card-footer">회와 국밥이 맛있었던 부산</div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">통영 여행</div>
+                <div class="card-body"><img src="{{url_for('static', filename='img/ty.jpg')}}" style="height: 300px; width: 300px;"></div> 
+                <div class="card-footer">동피랑 벽화마을이 예뻤던 통영</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

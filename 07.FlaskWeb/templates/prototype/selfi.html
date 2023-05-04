@@ -1,0 +1,110 @@
+{% extends 'prototype/base.html' %}
+{% block title %}자기소개{% endblock %}
+{% block additional_head %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+<script>
+    const now = new Date();
+    const weekday = now.getDay();
+    function dailyFs() {
+    let fS = `하루하루를 마지막이라고 생각하라. 
+그러면 예측할 수 없는 시간은  
+그대에게 더 많은 시간을 줄 것이다. - 호레스> 
+꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다. -괴테> 
+내일이란 오늘의 다른 이름일 뿐이다. ―윌리엄 포크너> 
+화려한 일을 추구하지 말라. 중요한 것은 스스로의 재능이며, 
+자신의 행동에 쏟아붓는 사랑의 정도이다. -마더 테레사> 
+마음만을 가지고 있어서는 안 된다. 반드시 실천하여야 한다. -이소룡> 
+시간은 우리 각자가 가진 고유의 재산이요, 유일한 재산이다. 
+그것을 어떻게 사용할 것인지 결정할 수 있는 것은 
+오로지 우리 자신뿐이다. 
+결코 그 재산을 남이 우리 대신 사용하지 않도록 조심해라. ―칼 샌드버그> 
+건강에 대한 지나친 걱정만큼 건강에 치명적인 것은 없다. -벤자민 프랭클린> 
+아침에 상쾌한 기분으로 일찍 일어나는 사람은 드물다. 
+대부분의 사람들은 그냥 일찍 일어날 뿐이다. ―P.P.> 
+나는 매일 저녁 모든 근심 걱정을 하나님께 넘겨 드린다. 
+어차피 하나님은 밤에도 안 주무실 테니까. ―메리 C. 크라울리> 
+오늘이란 신어야 할 신발과 같은 것이다. ―스티브 올렌>` 
+       const fS2 = fS.split('> ');
+       let resTag = document.getElementById('fS');
+       
+       let pick = Math.ceil(Math.random()*10);
+       
+       resTag.innerHTML =  fS2[pick];
+    }
+
+    function twoDigit(num) {
+       return (num<10) ? '0' + num : String(num);
+    }
+    function myDatetime(date){
+       return `${date.getFullYear()}-${twoDigit(date.getMonth()+1)}-${twoDigit(date.getDate())} `
+       + `${twoDigit(date.getHours())}:${twoDigit(date.getMinutes())}:${twoDigit(date.getSeconds())}`;
+    }
+    window.onload = function() {
+       setInterval(function() {
+           const now = new Date();
+           const week = ['일', '월', '화', '수', '목', '금', '토'] // == const week = '일월화수목금토'.split('');
+           let k = now.getDay();									// == week[now.getDay];
+
+           const dateStr = myDatetime(now).substring(2, 10) + '(' + week[k] + ') ' ;	// 23-03-21(수)
+           const timeStr = myDatetime(now).substring(11, 19);	// HH:MM:SS
+           
+           document.getElementById('time').innerHTML = dateStr + timeStr;
+        }, 1000)
+    }
+</script>
+<style>
+    button {border-radius: 10%;}
+</style>
+
+{% endblock %}
+
+{% block main %}
+<!-- upper navbar -->
+<div id="id0" style="margin-left: 400px; margin-right: 400px; text-align:center" >
+    <h2 style="margin: 10px; font-size: 30px; margin-top: 30px;">
+        <br>ㅎㅇ<br>
+            <br>
+        
+    </h2>
+</div>
+
+<!-- main -->
+<div id="section1" class="container text-black" style="padding:50px; text-align:center">
+    <div class="row">
+        <div class="col">
+            <div id="id1" >
+                <p style="font-size: 20px; font-weight: bold;"><img src="{{url_for('static', filename='img/idea.png')}}" alt="idea" style="height: 20px;"> 자기소개 <br></p>
+                안녕하세요. 연세IT미래교육원에서<br>
+                수강중인 최범준이라고 합니다.
+            </div><br>
+            <div id="id2" style="margin-top: 70px">
+                명언으로 하루 <button onclick="dailyFs()" style="font-size: 16px;">시작</button><hr>
+                <div id="fS"></div>
+            </div><br>
+            <div id="id3" style="margin-top: 70px">
+                저의 취미는.. 주로 정적인 활동입니다.<br>자세히 보시려면
+                <a href="/selfi_hobby"><button style="font-size: 16px;">
+                <img src="{{url_for('static', filename='img/hobby.png')}}" alt="hobby" style="height: 20px;">여기</button></a>를 눌러주세요
+            </div>
+            
+        </div>
+        <div class="col">
+            <img src="{{url_for('static', filename='img/male.png')}}" alt="male" style="height: 430px; margin-top: 10px;">
+        </div>
+        <div class="col px-5">
+            <div id="id4" >
+                <br><p style="font-size: 16px;">나의 기억에 남는 여행지
+                    <!--  -->
+                <a href="/selfi_travel"><button>보러가기<img src="{{url_for('static', filename='img/travel.png')}}" alt="travel" style="height: 15px;"></button></a></p><br>
+            </div>
+            <div id="id5" style="margin-top: 70px"><br>
+                <p style="font-size: 20px;">좋아하는 음식
+                <a href="/selfi_food"><button>보러가기</button></a></p>	<br>
+            </div>
+            <div id="id6" style="margin-top: 70px">
+                <br><div class="nav-item" id="time" style="margin-top: 10px; font-size: 22px;"></div><br>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'prototype/base.html' %}
+{% block title %}인터파크도서 베스트셀러 목록{% endblock %}
+{% block additional_head %}
+<style>
+    td {font-weight: bold;}
+</style>
+{% endblock %}
+
+{% block main %}
+<h2>베스트셀러</h2>
+    <hr>
+    <table class='table table-bordered border-dark'>
+        <tr><th>이미지</th><th>제목</th><th>저자</th><th>출판사</th><th>가격</th></tr>
+        {% for book in book_list %}
+            <tr>
+                <td style="text-align: center;"><img src="{{book.img}}" height="50"></td>
+                <td><label class="col-form-label"><a href="{{book.href}}" target="_blank">{{book.title}}</a></label></td>
+                <td><label class="col-form-label">{{book.author}}</label></td> <td><label class="col-form-label">{{book.company}}</label></td>
+                <td><label class="col-form-label">{{book.price}}</label></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

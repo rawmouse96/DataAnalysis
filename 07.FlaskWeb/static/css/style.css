@@ -1,0 +1,145 @@
+#id0 {
+	position: relative;
+	background: white;
+	border-radius: .4em;
+}
+
+#id0:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 17px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	margin-left: -17px;
+	margin-bottom: -17px;
+}
+
+#id1 {
+	position: relative;
+	background: white;
+	border-radius: .4em;
+    font-size: 16px;
+}
+
+#id1:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-left-color: white;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+	margin-right: -20px;
+}
+
+#id2 {
+	position: relative;
+	background: white;
+	border-radius: .4em;
+}
+
+#id2:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-left-color: white;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -10px;
+	margin-right: -20px;
+}
+
+#id3 {
+	position: relative;
+	background: white;
+	border-radius: .4em;
+}
+
+#id3:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-left-color: white;
+	border-right: 0;
+	border-top: 0;
+	margin-top: -10px;
+	margin-right: -20px;
+}
+
+#id4 {
+	position: relative;
+	background: white;
+	border-radius: .4em;
+}
+
+#id4:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 16px solid transparent;
+	border-right-color: white;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -8px;
+	margin-left: -16px;
+}
+
+#id5 {
+	position: relative;
+	background: white;
+	border-radius: .4em;
+}
+
+#id5:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	border-right-color: white;
+	border-left: 0;
+	margin-top: -8px;
+	margin-left: -8px;
+}
+
+#id6 {
+	position: relative;
+	background: white;
+	border-radius: .4em;
+}
+
+#id6:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 12px solid transparent;
+	border-right-color: white;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -6px;
+	margin-left: -12px;
+}

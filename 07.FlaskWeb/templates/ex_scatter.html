@@ -2,7 +2,7 @@
 
 {% block style %}
     <style>
-        td {text-align: center; font-size: 20px;}
+        td {text-align: center; font-size: 20px; font-weight: bold;}
     </style>
 {% endblock %}
 
@@ -10,32 +10,34 @@
 <div class="row text-center">
     <div class="col-4"></div>
     <div class="col-4">
-    <br><h2>산점도</h2>
+    <br><h1>산점도</h1>
     <hr><br><br>
         <form action="/scatter" method="post">
             <table>
                 <tr>
-                    <td>점의 갯수</td>
-                    <td><input type="text" name="num"></td>
+                    <td><label class="col-form-label"> 점의 갯수</label></td>
+                    <!-- col-form-label : input과 text 높이 맞춰줌 -->
+                    <td><input class="form-control" type="text" name="num"></td>
+                    <!-- form-control : 표 서식 예쁘게 -->
                 </tr>
                 <tr>
-                    <td>X 평균</td>
-                    <td><input type="text" name="mean"></td>
+                    <td><label class="col-form-label">X 평균</label></td>
+                    <td><input class="form-control" type="text" name="mean"></td>
                 </tr>
                 <tr>
-                    <td>X 표준편차</td>
-                    <td><input type="text" name="std"></td>
+                    <td><label class="col-form-label">X 표준편차</label></td>
+                    <td><input class="form-control" type="text" name="std"></td>
                 </tr>
                 <tr>
-                    <td>Y 최솟값</td>
-                    <td><input type="text" name="min"></td>
+                    <td><label class="col-form-label">Y 최솟값</label></td>
+                    <td><input class="form-control" type="text" name="min"></td>
                 </tr>
                 <tr>
-                    <td>Y 최댓값</td>
-                    <td><input type="text" name="max"></td>
+                    <td><label class="col-form-label">Y 최댓값</label></td>
+                    <td><input class="form-control" type="text" name="max"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="확인"></td>
+                    <td colspan="2"><button class="form-control" type="submit">확인</button></td>
                 </tr>
             </table>
         </form>
