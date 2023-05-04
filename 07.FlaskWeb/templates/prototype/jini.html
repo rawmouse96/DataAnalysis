@@ -2,7 +2,7 @@
 {% block title %}지니차트{% endblock %}
 {% block additional_head %}
 <style>
-    td {font-weight: bold;}
+    table {font-weight: bold; text-align: center;}
 </style>
 {% endblock %}
 
@@ -10,10 +10,11 @@
 <h2>지니차트 Top100</h2>
 <hr>
 <table class='table table-bordered border-dark'>
-    <tr><th>랭킹</th><th>가수</th><th>제목</th><th>앨범</th></tr>
+    <tr><th style="width:4%">순위</th><th style="width:5%">썸네일</th><th style="width:20%">가수</th><th style="width:25%">제목</th><th style="width:46%">앨범</th></tr>
     {% for jini in jini_list %}
         <tr>
             <td><label class="col-form-label">{{jini.rank}}</label></td>
+            <td><img src="{{jini.img}}" style="height:40px"></td>
             <td><label class="col-form-label">{{jini.artists}}</label></td> 
             <td><label class="col-form-label">{{jini.title}}</label></td>
             <td><label class="col-form-label">{{jini.album}}</label></td>
