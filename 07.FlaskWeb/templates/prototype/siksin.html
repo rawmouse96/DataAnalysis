@@ -1,5 +1,5 @@
 {% extends 'prototype/base.html' %}
-{% block title %}식신선정 장안문 맛집리스트{% endblock %}
+{% block title %}장안문 맛집리스트{% endblock %}
 {% block additional_head %}
 <style>
     table {font-weight: bold; text-align: center;}
@@ -13,12 +13,12 @@
     <tr><th style="width: 6%;">대표사진</th><th style="width: 10%;">점포명</th><th style="width: 8%;">평점</th>
         <th style="width: 28%;">위치</th><th style="width: 38%;">대표메뉴</th></tr>
     {% for food in food_list %}
-        <tr>
+        <tr class="align-middle">
             <td><img src="{{food.img}}" style="height:60px"></td>
-            <td><label class="col-form-label">{{food.title}}</label></td>
-            <td><label class="col-form-label">{{food.score}}</label></td> 
-            <td><label class="col-form-label">{{food.loc}}</label></td>
-            <td><label class="col-form-label">{{food.menu}}</label></td>
+            <td>{{food.title}}</td>
+            <td>{{food.score}}</td> 
+            <td>{{food.loc}}</td>
+            <td>{{food.menu}}</td>
         </tr>
     {% endfor %}
 </table>
