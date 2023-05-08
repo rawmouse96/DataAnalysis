@@ -21,16 +21,6 @@ def schedule():
     menu = {'ho':0, 'us':0, 'ai':0, 'sc':1, 'cr':0}
     return render_template('prototype/schedule.html', menu=menu, weather=get_weather(app))
 
-@app.route('/schedule')
-def crawling():
-    menu = {'ho':0, 'us':0, 'ai':0, 'sc':0, 'cr':1}
-    return render_template('prototype/crawling.html', menu=menu, weather=get_weather(app))
-
-@app.route('/schedule')
-def user():
-    menu = {'ho':0, 'us':1, 'ai':0, 'sc':0, 'cr':0}
-    return render_template('prototype/crawling.html', menu=menu, weather=get_weather(app))
-
 @app.route('/selfi')
 def selfi():
     menu = {'ho':0, 'us':1, 'ai':0, 'sc':0, 'cr':0}

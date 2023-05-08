@@ -2,19 +2,39 @@
 {% block title %}Home{% endblock %}
 {% block additional_head %}
 <style>
-    
+    .wrapper {
+		height: 40vh;
+		/*This part is important for centering*/
+		display: grid;
+		place-items: center;
+	  }
+	  .typing-demo {
+		width: 22ch;
+		animation: typing 4s steps(22), blink .5s step-end infinite;
+		white-space: nowrap;
+		overflow: hidden;
+		border-right: 3px solid;
+		font-family: monospace;
+		font-size: 5em;
+	  }
+	  
+	  @keyframes typing {
+		from {
+		  width: 0
+		}
+	  }
+		  
+	  @keyframes blink {
+		50% {
+		  border-color: transparent
+		}
+	  }
 </style>
 {% endblock %}
 {% block main %}
-<div class="row">
-	<p><img src="{{url_for('static', filename='img/home.jpg')}}" alt=""></p>
-<div id="bgid" class="container col-6">
-	
-</div>
-<div class="row">
-	<div class="col-6"></div>
-	<div id="bgid" class="container col-6">
-		
-	</div>
+<div class="container">
+		<div class="wrapper">
+			<div class="typing-demo">Welcome.</div>
+		</div>
 </div>
 {% endblock %}
