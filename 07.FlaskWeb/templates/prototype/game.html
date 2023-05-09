@@ -1,0 +1,24 @@
+{% extends 'prototype/base.html' %}
+{% block title %}PC 온라인게임 순위{% endblock %}
+{% block additional_head %}
+<style>
+    table {font-weight: bold; text-align: center;}
+</style>
+{% endblock %}
+
+{% block main %}
+<h2>PC 온라인게임 순위</h2>
+<hr>
+<table class='table table-hover border-dark'>
+    <tr><th style="width: 5%;">랭킹</th><th style="width: 7%;">사진</th><th style="width: 8%;">게임명</th>
+        <th style="width: 28%;">장르</th></tr>
+    {% for dd in temp %}
+        <tr class="align-middle">
+            <td>{{dd.rank}}</td>
+            <td><img src="{{dd.img}}" style="height:60px"></td>
+            <td>{{dd.name}}</td> 
+            <td>{{dd.info}}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

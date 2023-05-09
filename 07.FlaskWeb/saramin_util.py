@@ -2,13 +2,9 @@ import requests
 from urllib.parse import quote
 import pandas as pd
 from bs4 import BeautifulSoup
+import math
 
-def jobkorea():
-    import requests
-    from urllib.parse import quote
-    import pandas as pd
-    from bs4 import BeautifulSoup
-    import math
+def jobkorea(): 
     url = f'https://www.jobkorea.co.kr/Search/?stext=%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0&local=B000%2CI000&careerType=1&jobtype=1&payType=1&payMin=3000&tabType=recruit&Page_No={1}&Ord=EditDtDesc'
     result = requests.get(url)
     soup = BeautifulSoup(result.text, 'html.parser')

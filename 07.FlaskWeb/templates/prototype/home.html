@@ -2,39 +2,31 @@
 {% block title %}Home{% endblock %}
 {% block additional_head %}
 <style>
-    .wrapper {
-		height: 40vh;
-		/*This part is important for centering*/
-		display: grid;
-		place-items: center;
-	  }
-	  .typing-demo {
-		width: 22ch;
-		animation: typing 4s steps(22), blink .5s step-end infinite;
-		white-space: nowrap;
-		overflow: hidden;
-		border-right: 3px solid;
-		font-family: monospace;
-		font-size: 5em;
-	  }
-	  
-	  @keyframes typing {
-		from {
-		  width: 0
-		}
-	  }
-		  
-	  @keyframes blink {
-		50% {
-		  border-color: transparent
-		}
-	  }
-</style>
+  #cradle {
+    filter: blur(2px);
+  }
+</style> 
 {% endblock %}
+
 {% block main %}
-<div class="container">
-		<div class="wrapper">
-			<div class="typing-demo">Welcome.</div>
+<div class="row" style="margin-top:130px">
+	<!-- <div class="col-3"></div>
+	<div class="container col-9" id="wave">
+		<br><br><br><br><br><br><br><br><br><br><br>
+		<div class="waviy">
+			<span style="--i:1">W</span>
+			<span style="--i:2">E</span>
+			<span style="--i:3">L</span>
+			<span style="--i:4">C</span>
+			<span style="--i:5">O</span>
+			<span style="--i:6">M</span>
+			<span style="--i:7">E</span>
+			<span style="--i:8">.</span>
 		</div>
+	</div> -->
+  <div class="col-3"></div>
+  <div class="col-9">
+    <img id="cradle" src="{{url_for('static', filename='img/cradle.gif')}}" loop=infinite style="height:430px;">
+  </div>
 </div>
 {% endblock %}
