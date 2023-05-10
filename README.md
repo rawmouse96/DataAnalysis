@@ -1,4 +1,4 @@
-# Python-lecture 23.04.11~
+# DataAnalysis-lecture 23.04.11~
 
 ### 데이터 분석 강좌
 

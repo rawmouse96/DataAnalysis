@@ -44,7 +44,7 @@ def change_profile():
     filename = os.path.join(app.static_folder, f'upload/{file_image.filename}')
     file_image.save(filename)
     iu.change_profile(app, filename)
-    return ''
+    return '' 
 
 @app.route('/game')
 def game_rank():
