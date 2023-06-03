@@ -71,9 +71,9 @@
 				<span class="nav-bar me-3" style="color:azure">
 					{% if session['uid'] %}
 							{{ session['uid'] }}님 환영합니다.
-						{% else %}
-							{% block weather%}{{ weather|safe() }}{% endblock %}
-						{% endif %}
+					{% else %}
+						{% block weather%}{{ weather|safe() }}{% endblock %}
+					{% endif %}
 				</span>
 		</div>
 	</nav>
